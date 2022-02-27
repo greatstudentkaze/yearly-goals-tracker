@@ -1,0 +1,24 @@
+:root {
+    /* Colors */
+    --white: #ffffff;
+    --black: #161616;
+    --blue: #337ab7;
+
+    /* Color aliases */
+    --link: var(--blue);
+
+    /* Fonts */
+    --font-primary: "Montserrat", "Verdana", sans-serif;
+    --font-system:
+            -apple-system,
+            blinkmacsystemfont,
+            segoe ui,
+            roboto,
+            oxygen,
+            ubuntu,
+            cantarell,
+            fira sans,
+            droid sans,
+            helvetica neue,
+            sans-serif;
+}

@@ -1,0 +1,14 @@
+.page,
+.page__body {
+    margin: 0;
+}
+
+.page__body {
+    cursor: default;
+
+    color: var(--black);
+
+    font-family: var(--font-primary);
+    font-size: 14px;
+    line-height: 22px;
+}
