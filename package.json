@@ -39,5 +39,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "postcss-import": "^14.0.2",
+    "postcss-media-minmax": "^5.0.0"
   }
 }
