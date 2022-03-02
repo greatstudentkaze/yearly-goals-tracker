@@ -1,0 +1,27 @@
+.input-field__label {
+    display: block;
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.input-field__input {
+    display: block;
+    width: 100%;
+    padding: 16px 18px;
+
+    background-color: var(--white);
+    border: 2px solid var(--black);
+
+    font-family: var(--font-primary);
+    font-size: 16px;
+    line-height: 22px;
+
+    transition: box-shadow 0.2s ease-in-out 0s;
+}
+
+.input-field__input:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 1px var(--black);
+}

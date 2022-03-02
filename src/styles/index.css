@@ -9,5 +9,8 @@
 @import "blocks/visually-hidden.css";
 @import "blocks/page.css";
 @import "blocks/container.css";
+@import "blocks/button.css";
+@import "blocks/input-field.css";
+@import "blocks/description-list.css";
 @import "blocks/main-nav.css";
 @import "blocks/header.css";
