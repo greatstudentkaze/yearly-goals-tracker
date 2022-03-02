@@ -6,3 +6,8 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+*:not(input):focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 2px;
+}
