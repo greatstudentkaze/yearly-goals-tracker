@@ -1,0 +1,13 @@
+.description-list__wrap {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    column-gap: 20px;
+}
+
+.description-list__wrap:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.description-list__dd {
+    margin-left: 0;
+}
