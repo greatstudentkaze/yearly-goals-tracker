@@ -1,0 +1,29 @@
+.button {
+    display: inline-block;
+    padding: 14px 60px;
+
+    background-color: var(--black);
+    border: 2px solid var(--black);
+
+    color: var(--white);
+    font-family: var(--font-primary);
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+
+    transition: all 0.2s ease-in-out 0s;
+    transition-property: background-color, color, opacity;
+}
+
+.button:enabled:hover,
+.button:focus-visible {
+    background-color: var(--white);
+
+    color: var(--black);
+}
+
+.button:enabled:active {
+    opacity: 0.6;
+}
