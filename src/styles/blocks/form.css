@@ -1,0 +1,21 @@
+.form {
+    padding: 100px;
+
+    border: 2px solid var(--black);
+}
+
+.form__title {
+    margin: 0;
+    margin-bottom: 50px;
+
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.form__input + .form__input {
+    margin-top: 20px;
+}
+
+.form__submit {
+    margin-top: 50px;
+}
