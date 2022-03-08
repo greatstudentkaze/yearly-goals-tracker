@@ -1,0 +1,44 @@
+.goal-list {
+    max-width: 470px;
+    margin: 0 auto;
+}
+
+.goal-list__title {
+    margin: 0;
+
+    font-size: 32px;
+    line-height: 36px;
+}
+
+.goal-list__copy {
+    margin: 0;
+    margin-top: 15px;
+
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 300;
+}
+
+.goal-list__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.goal-list__empty {
+    margin: 0;
+    text-align: center;
+}
+
+.goal-list__empty b {
+    font-weight: 600;
+}
+
+.goal-list__list,
+.goal-list__empty {
+    margin-top: 60px;
+}
+
+.goal-list__item:not(:last-child) {
+    margin-bottom: 30px;
+}
