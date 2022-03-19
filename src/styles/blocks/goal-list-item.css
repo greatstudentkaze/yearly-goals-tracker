@@ -19,55 +19,6 @@
     white-space: nowrap;
 }
 
-.goal-list-item__status-indicator {
-    display: block;
-    width: 30px;
-    height: 30px;
-
-    background-color: var(--white);
-    border: 2px solid var(--black);
-    border-radius: 50%;
-}
-
-.goal-list-item__status {
-    display: block;
-    cursor: pointer;
-}
-
-.goal-list-item__status-indicator {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    color: var(--black);
-
-    transition: all 0.2s ease-in-out 0s;
-    transition-property: box-shadow, background-color;
-}
-
-.goal-list-item__status-indicator .icon {
-    width: 20px;
-    height: 20px;
-
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out 0s;
-}
-
-.goal-list-item__status input:checked ~ .goal-list-item__status-indicator {
-    background-color: var(--black);
-    color: var(--white);
-}
-
-.goal-list-item__status input:checked ~ .goal-list-item__status-indicator .icon,
-.goal-list-item__status:hover .goal-list-item__status-indicator .icon {
-    opacity: 1;
-}
-
-.goal-list-item__status input:focus ~ .goal-list-item__status-indicator,
-.goal-list-item__status input:hover ~ .goal-list-item__status-indicator {
-    box-shadow: inset 0 0 0 1px var(--black);
-}
-
 .goal-list-item__link {
     display: flex;
     justify-content: center;

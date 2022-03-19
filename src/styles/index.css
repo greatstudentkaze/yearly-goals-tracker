@@ -15,6 +15,7 @@
 @import "blocks/description-list.css";
 @import "blocks/main-nav.css";
 @import "blocks/header.css";
+@import "blocks/goal-item-status.css";
 @import "blocks/goal-list.css";
 @import "blocks/goal-list-item.css";
 @import "blocks/form.css";

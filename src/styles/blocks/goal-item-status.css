@@ -1,0 +1,46 @@
+label.goal-item-status {
+    display: block;
+    cursor: pointer;
+}
+
+.goal-item-status__indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+
+    background-color: var(--white);
+    border: 2px solid var(--black);
+    border-radius: 50%;
+
+    color: var(--black);
+
+    transition: all 0.2s ease-in-out 0s;
+    transition-property: box-shadow, background-color;
+}
+
+.goal-item-status__indicator .icon {
+    width: 20px;
+    height: 20px;
+
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out 0s;
+}
+
+.goal-item-status input:checked ~ .goal-item-status__indicator,
+.goal-item-status--checked .goal-item-status__indicator {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.goal-item-status input:checked ~ .goal-item-status__indicator .icon,
+label.goal-item-status:hover .goal-item-status__indicator .icon,
+.goal-item-status--checked .goal-item-status__indicator .icon {
+    opacity: 1;
+}
+
+.goal-item-status input:focus ~ .goal-item-status__indicator,
+.goal-item-status input:hover ~ .goal-item-status__indicator {
+    box-shadow: inset 0 0 0 1px var(--black);
+}

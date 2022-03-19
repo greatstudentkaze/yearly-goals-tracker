@@ -12,9 +12,9 @@ const GoalListItem = ({
     isCompleted,
 }: IGoal) => (
     <li className="goal-list__item goal-list-item">
-        <label className="goal-list-item__status">
+        <label className="goal-item-status">
             <input className="visually-hidden" type="checkbox" aria-label={title} defaultChecked={isCompleted} />
-            <span className="goal-list-item__status-indicator">
+            <span className="goal-item-status__indicator">
                 <TickIcon className="icon" width="20" height="20" />
             </span>
         </label>
