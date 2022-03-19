@@ -1,3 +1,7 @@
+.description-list {
+    margin: 0;
+}
+
 .description-list__wrap {
     display: grid;
     grid-template-columns: 80px 1fr;
