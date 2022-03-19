@@ -1,0 +1,46 @@
+.goal-details__header {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+
+    /* var(--black) with 0.25 opacity */
+    border-bottom: 1px solid rgba(22, 22, 22, 0.25);
+}
+
+.goal-details__header-wrap {
+    display: flex;
+}
+
+.goal-details__title {
+    margin: 0;
+
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.goal-details__status {
+    margin-left: 15px;
+}
+
+.goal-details__description {
+    margin: 0;
+    margin-top: 15px;
+}
+
+.goal-details__amount-input {
+    max-width: 370px;
+    margin-bottom: 50px;
+}
+
+.goal-details__completion-toggle-button,
+.goal-details__submit-button {
+    display: block;
+    margin-bottom: 50px;
+}
+
+.goal-details__section:not(:last-child) {
+    margin-bottom: 50px;
+}

@@ -1,0 +1,31 @@
+.goal-details-section__header-wrap {
+    display: flex;
+    align-items: start;
+}
+
+.goal-details-section__title {
+    margin: 0;
+    margin-bottom: 15px;
+
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.goal-details-section__icon-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    padding: 0;
+
+    background-color: transparent;
+    border: none;
+}
+
+.goal-details-section__icon-button:enabled {
+    cursor: pointer;
+}
+
+.goal-details-section__add-note-form {
+    margin-bottom: 40px;
+}
