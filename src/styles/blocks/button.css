@@ -27,3 +27,8 @@
 .button:enabled:active {
     opacity: 0.6;
 }
+
+.button:disabled {
+    background-color: var(--disabled);
+    border-color: var(--disabled);
+}

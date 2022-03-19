@@ -6,6 +6,7 @@
 
     /* Color aliases */
     --link: var(--blue);
+    --disabled: #8b8b8b;
 
     /* Fonts */
     --font-primary: "Montserrat", "Verdana", sans-serif;
