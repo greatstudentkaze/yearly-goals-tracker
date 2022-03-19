@@ -12,3 +12,8 @@
     font-size: 14px;
     line-height: 22px;
 }
+
+.page__main {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}

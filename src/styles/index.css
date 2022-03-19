@@ -7,8 +7,8 @@
 /* Blocks */
 
 @import "blocks/visually-hidden.css";
-@import "blocks/page.css";
 @import "blocks/container.css";
+@import "blocks/page.css";
 @import "blocks/button.css";
 @import "blocks/icon.css";
 @import "blocks/input-field.css";
