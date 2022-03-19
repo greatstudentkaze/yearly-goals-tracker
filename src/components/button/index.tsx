@@ -6,9 +6,10 @@ const Button = ({
     type = 'button',
     children,
     className,
+    ...props
 }: ButtonProps) => {
     return (
-        <button className={cn('button', className)} type={type}>
+        <button className={cn('button', className)} type={type} {...props}>
             {children}
         </button>
     );
