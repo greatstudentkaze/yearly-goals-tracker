@@ -17,7 +17,7 @@ const goalTypeOptions = [
 const CreateGoalForm = () => {
     return (
         <div className="form">
-            <h1 className="form__title">Give feedback / Ask a question</h1>
+            <h1 className="form__title">Create goal</h1>
             <form action="https://echo.htmlacademy.ru" method="post">
                 <InputField
                     className="form__input" 
