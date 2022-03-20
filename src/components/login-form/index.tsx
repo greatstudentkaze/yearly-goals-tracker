@@ -2,8 +2,9 @@ import { FormEvent, useContext } from 'react';
 
 import { AppContext } from '../../app.context';
 
-import InputField from '../input-field';
-import Button from '../button';
+import Form from '../shared/form';
+
+import { fieldsConfig } from './fields.config';
 
 const LoginForm = () => {
     const { setIsAuthorized } = useContext(AppContext);
@@ -14,30 +15,14 @@ const LoginForm = () => {
     };
 
     return (
-        <div className="form">
-            <h1 className="form__title">Login</h1>
-            <form action="https://echo.htmlacademy.ru" method="post" onSubmit={handleSubmit}>
-                <InputField
-                    className="form__input"
-                    type="email"
-                    labelText="Email"
-                    id="email"
-                    placeholder="hi@nefagin.ru"
-                    autoComplete="username"
-                />
-                <InputField
-                    className="form__input"
-                    type="password"
-                    labelText="Password"
-                    id="password"
-                    placeholder="*************"
-                    autoComplete="current-password"
-                />
-                <Button className="form__submit" type="submit">
-                    Login
-                </Button>
-            </form>
-        </div>
+        <Form
+            title="Login"
+            inputFieldConfig={fieldsConfig}
+            submitText="Login"
+            onSubmit={handleSubmit}
+            action="https://echo.htmlacademy.ru"
+            method="post"
+        />
     );
 };
 
