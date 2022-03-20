@@ -3,7 +3,7 @@ import cn from 'classnames';
 import { SelectFieldProps } from './index.props';
 import DropdownIconSrc from '../../images/svg/dropdown.svg';
 
-// TODO: think about combining with InputFiekd
+// TODO: think about combining with InputField
 const SelectField = ({
     labelText,
     id,
@@ -24,7 +24,7 @@ const SelectField = ({
                 {...props}
             >
                 {options.map(({ value, label }) => (
-                    <option value={value}>{label}</option>
+                    <option key={value} value={value}>{label}</option>
                 ))}
             </select>
         </div>
