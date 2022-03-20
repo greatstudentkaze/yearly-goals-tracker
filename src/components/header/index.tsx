@@ -1,17 +1,18 @@
-import cn from 'classnames';
+import { NavLink } from 'react-router-dom';
+import { AppRoute } from '../../contants';
 
 const navigationItems = [
     {
         label: 'Goal list for the year',
-        route: '/',
+        route: AppRoute.ROOT,
     },
     {
         label: 'Create goal',
-        route: '/',
+        route: AppRoute.CREATE_GOAL,
     },
     {
         label: 'Feedback',
-        route: '/',
+        route: AppRoute.FEEDBACK,
     },
 ];
 
@@ -21,8 +22,13 @@ const Header = () => {
             <nav className="main-nav">
                 <ul className="main-nav__list">
                     {navigationItems.map(({ label, route }, i) => (
-                        <li key={i} className={cn('main-nav__item', { 'main-nav__item--current': i === 0 })}>
-                            <a href={route}>{label}</a>
+                        <li key={i} className="main-nav__item">
+                            <NavLink
+                                className={({ isActive }) => isActive ? 'main-nav__link--current' : undefined}
+                                to={route}
+                            >
+                                {label}
+                            </NavLink>
                         </li>
                     ))}
                 </ul>

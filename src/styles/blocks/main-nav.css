@@ -31,13 +31,13 @@
     opacity: 0.4;
 }
 
-.main-nav__item--current a {
+.main-nav__link--current {
     position: relative;
 
     font-weight: 700;
 }
 
-.main-nav__item--current a::after {
+.main-nav__link--current::after {
     content: "";
     position: absolute;
     right: 0;
