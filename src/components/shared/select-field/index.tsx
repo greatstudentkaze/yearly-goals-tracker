@@ -1,7 +1,7 @@
 import cn from 'classnames';
 
 import { SelectFieldProps } from './index.props';
-import DropdownIconSrc from '../../images/svg/dropdown.svg';
+import DropdownIconSrc from '../../../images/svg/dropdown.svg';
 
 // TODO: think about combining with InputField
 const SelectField = ({

@@ -3,7 +3,7 @@ import { useContext } from 'react';
 
 import { AppContext } from '../../app.context';
 
-import Layout from '../../components/layout';
+import Layout from '../../components/shared/layout';
 import GoalDetails from '../../components/goal-details';
 
 const GoalDetailsScreen = () => {

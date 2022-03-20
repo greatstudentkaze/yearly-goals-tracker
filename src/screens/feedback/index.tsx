@@ -1,4 +1,4 @@
-import Layout from '../../components/layout';
+import Layout from '../../components/shared/layout';
 import FeedbackForm from '../../components/feedback-form';
 
 const Feedback = () => {

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import cn from 'classnames';
 
-import Button from '../button';
-import InputField from '../input-field';
+import Button from '../shared/button';
+import InputField from '../shared/input-field';
 import DescriptionList from '../description-list';
 import DescriptionItem from '../description-list/description-item';
 

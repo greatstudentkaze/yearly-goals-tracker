@@ -1,5 +1,5 @@
 import LoginForm from '../../components/login-form';
-import Layout from '../../components/layout';
+import Layout from '../../components/shared/layout';
 
 const Login = () => {
     return (

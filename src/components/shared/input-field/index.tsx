@@ -9,6 +9,8 @@ const InputField = ({
     className,
     ...props
 }: InputFieldProps) => {
+    const isTextArea = type === 'textarea';
+
     return (
         <div className={cn('input-field', className)}>
             <label className="input-field__label" htmlFor={id}>{labelText}</label>

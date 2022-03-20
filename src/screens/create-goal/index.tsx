@@ -1,5 +1,5 @@
 import CreateGoalForm from '../../components/create-goal-form';
-import Layout from '../../components/layout';
+import Layout from '../../components/shared/layout';
 
 const CreateGoal = () => {
     return (

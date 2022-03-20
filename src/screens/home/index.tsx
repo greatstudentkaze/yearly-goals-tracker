@@ -2,7 +2,7 @@ import { useContext, useEffect } from 'react';
 
 import { AppContext } from '../../app.context';
 
-import Layout from '../../components/layout';
+import Layout from '../../components/shared/layout';
 import GoalList from '../../components/goal-list';
 
 const Home = () => {

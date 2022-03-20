@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { AppRoute } from '../../../contants';
 import { IGoal } from '../../../interfaces/interfaces';
 
-import InputField from '../../input-field';
+import InputField from '../../shared/input-field';
 
 import { ReactComponent as TickIcon } from '../../../images/svg/tick.svg';
 import { ReactComponent as ArrowIcon } from '../../../images/svg/arrow.svg';
