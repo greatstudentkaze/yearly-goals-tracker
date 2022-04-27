@@ -9,7 +9,7 @@ const Layout = ({
     return (
         <>
             {!withoutHeader && <Header/>}
-            <main className="page__main container">
+            <main className="page__main container" id="main-content">
                 {children}
             </main>
         </>

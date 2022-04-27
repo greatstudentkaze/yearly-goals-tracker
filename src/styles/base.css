@@ -11,3 +11,7 @@ img {
     outline: 3px solid var(--blue);
     outline-offset: 2px;
 }
+
+#main-content {
+    outline: none;
+}

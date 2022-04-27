@@ -7,6 +7,7 @@
 /* Blocks */
 
 @import "blocks/visually-hidden.css";
+@import "blocks/skip-link.css";
 @import "blocks/container.css";
 @import "blocks/page.css";
 @import "blocks/button.css";
