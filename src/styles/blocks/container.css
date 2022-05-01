@@ -1,11 +1,6 @@
 .container {
+    max-width: 600px;
     margin: 0 auto;
     padding-right: 15px;
     padding-left: 15px;
-}
-
-@media (width > 1024px) {
-    .container {
-        max-width: 600px;
-    }
 }
