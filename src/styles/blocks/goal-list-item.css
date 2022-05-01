@@ -31,7 +31,7 @@
     width: 30px;
     height: 30px;
 
-    transition: transform 0.2s ease-in-out 0s;
+    transition: transform 0.2s ease 0s;
 }
 
 .goal-list-item__link:hover .icon {

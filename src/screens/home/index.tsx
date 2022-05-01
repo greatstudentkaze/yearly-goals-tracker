@@ -70,5 +70,4 @@ const mockGoals = [
     },
 ];
 
-
 export default Home;
