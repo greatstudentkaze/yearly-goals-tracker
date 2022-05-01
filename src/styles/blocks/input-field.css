@@ -27,6 +27,8 @@
 }
 
 .input-field__input--select {
+    padding-right: 50px;
+
     appearance: none;
     background-repeat: no-repeat;
     background-size: 20px;
