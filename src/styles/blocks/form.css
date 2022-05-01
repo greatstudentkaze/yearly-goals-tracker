@@ -1,21 +1,77 @@
+/* .form */
+
 .form {
-    padding: 100px;
+    padding: 30px 20px;
 
     border: 2px solid var(--black);
 }
 
+@media screen and (width >= 375px) {
+    .form {
+        padding: 60px 40px;
+    }
+}
+
+@media screen and (width >= 768px) {
+    .form {
+        padding: 100px;
+    }
+}
+
+/* .form__title */
+
 .form__title {
     margin: 0;
-    margin-bottom: 50px;
+    margin-bottom: 15px;
 
     font-size: 22px;
     line-height: 30px;
 }
 
-.form__input + .form__input {
-    margin-top: 20px;
+@media screen and (width >= 375px) {
+    .form__title {
+        margin-bottom: 30px;
+    }
 }
 
+@media screen and (width >= 768px) {
+    .form__title {
+        margin-bottom: 50px;
+    }
+}
+
+/* .form__input */
+
+.form__input + .form__input {
+    margin-top: 10px;
+}
+
+@media screen and (width >= 375px) {
+    .form__input + .form__input {
+        margin-top: 15px;
+    }
+}
+
+@media screen and (width >= 768px) {
+    .form__input + .form__input {
+        margin-top: 20px;
+    }
+}
+
+/* .form__submit */
+
 .form__submit {
-    margin-top: 50px;
+    margin-top: 15px;
+}
+
+@media screen and (width >= 375px) {
+    .form__submit {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (width >= 768px) {
+    .form__submit {
+        margin-top: 50px;
+    }
 }
