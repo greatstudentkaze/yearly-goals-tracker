@@ -1,3 +1,7 @@
+.input-field {
+    --border-color: var(--black);
+}
+
 .input-field__label {
     display: block;
     margin-bottom: 10px;
@@ -12,18 +16,21 @@
     padding: 16px 18px;
 
     background-color: var(--white);
-    border: 2px solid var(--black);
+    border: 2px solid var(--border-color);
 
     font-family: var(--font-primary);
     font-size: 16px;
     line-height: 22px;
+    text-overflow: ellipsis;
 
-    transition: box-shadow 0.2s ease-in-out 0s;
+    transition:
+            box-shadow 0.3s ease,
+            border-color 0.3s ease;
 }
 
 .input-field__input:focus {
     outline: none;
-    box-shadow: inset 0 0 0 1px var(--black);
+    box-shadow: inset 0 0 0 1px var(--border-color);
 }
 
 .input-field__input--select {
@@ -34,3 +41,15 @@
     background-size: 20px;
     background-position: right 20px center;
 }
+
+.input-field--error .input-field__input {
+    --border-color: var(--error);
+}
+
+.input-field__error-message {
+    margin: 0;
+    margin-top: 10px;
+
+    color: var(--error);
+}
+

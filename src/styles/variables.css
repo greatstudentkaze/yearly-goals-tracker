@@ -3,10 +3,12 @@
     --white: #ffffff;
     --black: #161616;
     --blue: #337ab7;
+    --red: #e32213;
 
     /* Color aliases */
     --link: var(--blue);
     --disabled: #8b8b8b;
+    --error: var(--red);
 
     /* Fonts */
     --font-primary: "Montserrat", "Verdana", sans-serif;
