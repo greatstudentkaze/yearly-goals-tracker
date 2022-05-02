@@ -1,4 +1,5 @@
 import { GENERIC_REQUIRED_VALIDATION_RULE } from '../shared/form/index.constants';
+import { validateStringWithWhitespaces } from '../shared/form/index.helpers';
 
 export const fieldsConfig = [
     {
@@ -25,5 +26,6 @@ export const fieldsConfig = [
             value: 30,
             message: 'Message should be at least 30 characters',
         },
+        validate: validateStringWithWhitespaces,
     },
 ];

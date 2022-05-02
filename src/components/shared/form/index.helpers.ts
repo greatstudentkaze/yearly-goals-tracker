@@ -1,4 +1,6 @@
-import { ValidationRule } from 'react-hook-form';
+import { Validate, ValidationRule } from 'react-hook-form';
+
+import { GENERIC_REQUIRED_VALIDATION_RULE } from './index.constants';
 
 type ValidationRuleType = boolean | number | string;
 
@@ -14,3 +16,5 @@ export const getHTMLValidationAttribute: GetHTMLValidationAttributeFromConfig =
             ? validationRule.value
             : validationRule;
     };
+
+export const validateStringWithWhitespaces: Validate<string> = (value) => !!value.trim() || GENERIC_REQUIRED_VALIDATION_RULE.message

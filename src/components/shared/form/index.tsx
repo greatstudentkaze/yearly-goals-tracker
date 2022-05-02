@@ -45,7 +45,7 @@ const Form = ({
                         }
 
                         const inputConfig = it as IInputFieldConfig;
-                        const { name, required, maxLength, minLength, ...restProps } = inputConfig;
+                        const { name, required, maxLength, minLength, validate, ...restProps } = inputConfig;
 
                         return (
                             <InputField
@@ -60,6 +60,7 @@ const Form = ({
                                     required,
                                     maxLength,
                                     minLength,
+                                    validate,
                                 })}
                             />
                         );

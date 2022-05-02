@@ -1,5 +1,5 @@
 import { DetailedHTMLProps, FormHTMLAttributes } from 'react';
-import { FieldValues, SubmitHandler, ValidationRule } from 'react-hook-form';
+import { FieldValues, SubmitHandler, Validate, ValidationRule } from 'react-hook-form';
 
 export interface IInputFieldConfig {
     name: string;
@@ -11,6 +11,7 @@ export interface IInputFieldConfig {
     required?: boolean | ValidationRule<boolean>;
     maxLength?: number | ValidationRule<number>;
     minLength?: number | ValidationRule<number>;
+    validate?: Validate<string>;
 }
 
 type SelectFieldOptionType = {
