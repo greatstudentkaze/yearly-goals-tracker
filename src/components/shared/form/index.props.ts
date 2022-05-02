@@ -1,12 +1,16 @@
 import { DetailedHTMLProps, FormHTMLAttributes } from 'react';
+import { FieldValues, SubmitHandler, ValidationRule } from 'react-hook-form';
 
-interface IInputFieldConfig {
+export interface IInputFieldConfig {
     name: string;
     id: string;
     type?: string;
     labelText: string;
     placeholder?: string;
     autoComplete?: string;
+    required?: boolean | ValidationRule<boolean>;
+    maxLength?: number | ValidationRule<number>;
+    minLength?: number | ValidationRule<number>;
 }
 
 type SelectFieldOptionType = {
@@ -21,10 +25,12 @@ interface ISelectFieldConfig {
     labelText: string;
     options: SelectFieldOptionType[];
     defaultValue?: string;
+    required?: boolean | ValidationRule<boolean>;
 }
 
 export interface FormProps extends DetailedHTMLProps<FormHTMLAttributes<HTMLFormElement>, HTMLFormElement> {
     title: string;
     inputFieldConfig: Array<IInputFieldConfig | ISelectFieldConfig>;
     submitText: string;
+    onSubmit: SubmitHandler<FieldValues>;
 }

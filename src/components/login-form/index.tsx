@@ -1,4 +1,5 @@
-import { FormEvent, useContext } from 'react';
+import { useContext } from 'react';
+import { FieldValues, SubmitHandler } from 'react-hook-form';
 
 import { AppContext } from '../../app.context';
 
@@ -9,9 +10,9 @@ import { fieldsConfig } from './fields.config';
 const LoginForm = () => {
     const { setIsAuthorized } = useContext(AppContext);
 
-    const handleSubmit = (evt: FormEvent<HTMLFormElement>) => {
-        evt.preventDefault();
+    const handleSubmit: SubmitHandler<FieldValues> = (data, evt) => {
         setIsAuthorized(true);
+        console.log(data, evt);
     };
 
     return (
