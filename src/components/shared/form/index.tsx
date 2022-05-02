@@ -61,6 +61,7 @@ const Form = ({
                                     maxLength,
                                     minLength,
                                     validate,
+                                    valueAsNumber: inputConfig.type === 'number',
                                 })}
                             />
                         );

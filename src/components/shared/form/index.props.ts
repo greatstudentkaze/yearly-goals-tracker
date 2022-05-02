@@ -11,7 +11,8 @@ export interface IInputFieldConfig {
     required?: boolean | ValidationRule<boolean>;
     maxLength?: number | ValidationRule<number>;
     minLength?: number | ValidationRule<number>;
-    validate?: Validate<string>;
+    // todo: think about generic
+    validate?: Validate<number> | Validate<string>;
 }
 
 type SelectFieldOptionType = {

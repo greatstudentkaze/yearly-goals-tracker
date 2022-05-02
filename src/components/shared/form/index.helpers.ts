@@ -18,3 +18,5 @@ export const getHTMLValidationAttribute: GetHTMLValidationAttributeFromConfig =
     };
 
 export const validateStringWithWhitespaces: Validate<string> = (value) => !!value.trim() || GENERIC_REQUIRED_VALIDATION_RULE.message
+
+export const validateNumber: Validate<number> = (value) => (!isNaN(value) && isFinite(value)) || 'Value must be a number';
