@@ -1,4 +1,5 @@
 import { DetailedHTMLProps, SelectHTMLAttributes } from 'react';
+import { ChangeHandler, FieldError } from 'react-hook-form';
 
 export interface SelectFieldProps extends DetailedHTMLProps<SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement> {
     labelText: string;
@@ -7,4 +8,7 @@ export interface SelectFieldProps extends DetailedHTMLProps<SelectHTMLAttributes
         value: string;
         label: string;
     }[];
+    error?: FieldError;
+    onChange?: ChangeHandler;
+    onBlur?: ChangeHandler;
 }
