@@ -1,4 +1,5 @@
-import { forwardRef } from 'react';
+import { forwardRef, useEffect } from 'react';
+import { useFormContext } from 'react-hook-form';
 import cn from 'classnames';
 
 import { InputFieldProps } from './index.props';
@@ -11,9 +12,20 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(({
     type = 'text',
     className,
     error,
+    unregisterOnUnmount,
     ...props
 }, ref) => {
     const isTextArea = type === 'textarea';
+    const methods = useFormContext();
+    const unregister = methods?.unregister;
+
+    useEffect(() => {
+        return () => {
+            if (unregister && unregisterOnUnmount) {
+                unregister(props.name);
+            }
+        };
+    }, [unregister, unregisterOnUnmount, props.name]);
 
     return (
         <div className={cn('input-field', className, {

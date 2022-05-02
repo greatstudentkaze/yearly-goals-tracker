@@ -7,4 +7,5 @@ export interface InputFieldProps extends DetailedHTMLProps<InputHTMLAttributes<H
     error?: FieldError;
     onChange?: ChangeHandler;
     onBlur?: ChangeHandler;
+    unregisterOnUnmount?: boolean;
 }

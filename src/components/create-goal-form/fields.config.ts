@@ -1,3 +1,5 @@
+import { FieldValues, UseFormGetValues } from 'react-hook-form';
+
 import { GENERIC_REQUIRED_VALIDATION_RULE } from '../shared/form/index.constants';
 import { validateNumber } from '../shared/form/index.helpers';
 
@@ -35,6 +37,11 @@ export const fieldsConfig = [
         required: GENERIC_REQUIRED_VALIDATION_RULE,
         placeholder: '1 000 000',
         validate: validateNumber,
+        dependencies: ['type'],
+        displayCondition: (getValues: UseFormGetValues<FieldValues>) => {
+            const type = getValues('type');
+            return type === 'amount';
+        },
     },
     {
         name: 'description',

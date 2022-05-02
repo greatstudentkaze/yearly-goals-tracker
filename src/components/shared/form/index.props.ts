@@ -1,5 +1,5 @@
 import { DetailedHTMLProps, FormHTMLAttributes } from 'react';
-import { FieldValues, SubmitHandler, Validate, ValidationRule } from 'react-hook-form';
+import { FieldValues, SubmitHandler, Validate, ValidationRule, UseFormGetValues } from 'react-hook-form';
 
 export interface IInputFieldConfig {
     name: string;
@@ -13,6 +13,8 @@ export interface IInputFieldConfig {
     minLength?: number | ValidationRule<number>;
     // todo: think about generic
     validate?: Validate<number> | Validate<string>;
+    dependencies?: string[];
+    displayCondition?: (getValues: UseFormGetValues<FieldValues>) => boolean;
 }
 
 type SelectFieldOptionType = {
@@ -28,6 +30,8 @@ interface ISelectFieldConfig {
     options: SelectFieldOptionType[];
     defaultValue?: string;
     required?: boolean | ValidationRule<boolean>;
+    dependencies?: string[];
+    displayCondition?: (getValues: UseFormGetValues<FieldValues>) => boolean;
 }
 
 export interface FormProps extends DetailedHTMLProps<FormHTMLAttributes<HTMLFormElement>, HTMLFormElement> {

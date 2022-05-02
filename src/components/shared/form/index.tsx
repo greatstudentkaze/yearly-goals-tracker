@@ -5,7 +5,7 @@ import SelectField from '../select-field';
 import Button from '../button';
 
 import { FormProps, IInputFieldConfig } from './index.props';
-import { getHTMLValidationAttribute } from './index.helpers';
+import { getHTMLValidationAttribute, getWatchFieldNames } from './index.helpers';
 
 const Form = ({
     title,
@@ -17,7 +17,9 @@ const Form = ({
     const methods = useForm({
         mode: 'onTouched',
     });
-    const { handleSubmit, register, formState: { errors } } = methods;
+    const { handleSubmit, register, formState: { errors }, getValues, watch } = methods;
+
+    watch(getWatchFieldNames(inputFieldConfig));
 
     return (
         <FormProvider {...methods}>
@@ -45,7 +47,20 @@ const Form = ({
                         }
 
                         const inputConfig = it as IInputFieldConfig;
-                        const { name, required, maxLength, minLength, validate, ...restProps } = inputConfig;
+                        const {
+                            name,
+                            required,
+                            maxLength,
+                            minLength,
+                            validate,
+                            displayCondition,
+                            dependencies,
+                            ...restProps
+                        } = inputConfig;
+
+                        if (displayCondition && !displayCondition(getValues)) {
+                            return null;
+                        }
 
                         return (
                             <InputField
@@ -63,6 +78,7 @@ const Form = ({
                                     validate,
                                     valueAsNumber: inputConfig.type === 'number',
                                 })}
+                                unregisterOnUnmount={!!dependencies}
                             />
                         );
                     })}
