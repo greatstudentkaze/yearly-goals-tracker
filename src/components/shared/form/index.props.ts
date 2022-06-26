@@ -1,5 +1,13 @@
-import { DetailedHTMLProps, FormHTMLAttributes } from 'react';
-import { FieldValues, SubmitHandler, Validate, ValidationRule, UseFormGetValues } from 'react-hook-form';
+import { DetailedHTMLProps, FormHTMLAttributes, SyntheticEvent } from 'react';
+import {
+    FieldValues,
+    SubmitHandler,
+    Validate,
+    ValidationRule,
+    UseFormGetValues,
+    UseFormSetValue,
+    DefaultValues,
+} from 'react-hook-form';
 
 export interface IInputFieldConfig {
     name: string;
@@ -38,5 +46,9 @@ export interface FormProps extends DetailedHTMLProps<FormHTMLAttributes<HTMLForm
     title: string;
     inputFieldConfig: Array<IInputFieldConfig | ISelectFieldConfig>;
     submitText: string;
-    onSubmit: SubmitHandler<FieldValues>;
+    // todo: how to use with FieldValues instead of any?
+    // how to implement generic interface if we want to specify field interfaces within forms (e.g. feedback-form.tsx)
+    onSubmit: SubmitHandler<any>;
+    defaultValues?: DefaultValues<FieldValues>;
+    error?: string;
 }

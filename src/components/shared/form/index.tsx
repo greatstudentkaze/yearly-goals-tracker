@@ -12,10 +12,13 @@ const Form = ({
     inputFieldConfig,
     submitText,
     onSubmit,
+    defaultValues,
+    error,
     ...props
 }: FormProps) => {
     const methods = useForm({
         mode: 'onTouched',
+        defaultValues,
     });
     const { handleSubmit, register, formState: { errors }, getValues, watch } = methods;
 
@@ -82,6 +85,10 @@ const Form = ({
                             />
                         );
                     })}
+
+                    {error && (
+                        <p className="form__error">{error}</p>
+                    )}
 
                     <Button className="form__submit" type="submit">
                         {submitText}
