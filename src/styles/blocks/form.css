@@ -58,6 +58,25 @@
     }
 }
 
+/* .form__error */
+
+.form__error {
+    margin: 7.5px 0;
+    color: var(--red);
+}
+
+@media screen and (width >= 375px) {
+    .form__error {
+        margin: 15px 0;
+    }
+}
+
+@media screen and (width >= 768px) {
+    .form__error {
+        margin: 25px 0;
+    }
+}
+
 /* .form__submit */
 
 .form__submit {
@@ -74,4 +93,8 @@
     .form__submit {
         margin-top: 50px;
     }
+}
+
+.form__error + .form__submit {
+    margin-top: 0;
 }
