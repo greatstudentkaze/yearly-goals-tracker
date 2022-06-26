@@ -1,17 +1,22 @@
-import { useContext } from 'react';
-import { FieldValues, SubmitHandler } from 'react-hook-form';
+import { SubmitHandler } from 'react-hook-form';
 
-import { AppContext } from '../../app.context';
+import { useAppDispatch } from '../../store/hooks';
+import { login } from '../../store/features/user/slice';
 
 import Form from '../shared/form';
 
 import { fieldsConfig } from './fields.config';
 
-const LoginForm = () => {
-    const { setIsAuthorized } = useContext(AppContext);
+interface FormValues {
+    email: string;
+    password: string;
+}
 
-    const handleSubmit: SubmitHandler<FieldValues> = (data, evt) => {
-        setIsAuthorized(true);
+const LoginForm = () => {
+    const dispatch = useAppDispatch();
+
+    const handleSubmit: SubmitHandler<FormValues> = (data, evt) => {
+        dispatch(login(data));
         console.log(data, evt);
     };
 

@@ -1,21 +1,26 @@
-import { useParams } from 'react-router-dom';
-import { useContext } from 'react';
-
-import { AppContext } from '../../app.context';
+import { Navigate, useParams } from 'react-router-dom';
 
 import Layout from '../../components/shared/layout';
 import GoalDetails from '../../components/goal-details';
+import { useAppSelector } from '../../store/hooks';
+import { selectGoals } from '../../store/features/yearly-goals/slice';
+import { AppRoute } from '../../contants';
 
 const GoalDetailsScreen = () => {
     const { id } = useParams();
-    const { goals } = useContext(AppContext);
+    const goals = useAppSelector(selectGoals);
 
-    const goalItem = goals?.find((item) => item.id === id);
+    if (!goals) {
+        return (
+            <Navigate replace to={AppRoute.ROOT} />
+        );
+    }
 
+    const goalItem = goals.find((item) => item.id === id);
     if (!goalItem) {
         return (
             <Layout>
-                <p>not found</p>
+                <p>Not found</p>
             </Layout>
         );
     }

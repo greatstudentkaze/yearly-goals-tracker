@@ -1,22 +1,19 @@
-import { useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router';
 
-import { AppContext } from './app.context';
-import { IGoal } from './interfaces/interfaces';
 import { AppRoute } from './contants';
+import { useAppSelector } from './store/hooks';
+import { selectIsAuthorized } from './store/features/user/slice';
 
 import Login from './screens/login';
 import Home from './screens/home';
 import CreateGoal from './screens/create-goal';
 import GoalDetailsScreen from './screens/goal-details';
 import Feedback from './screens/feedback';
-
 const App = () => {
-    const [isAuthorized, setIsAuthorized] = useState(false);
-    const [goals, setGoals] = useState<IGoal[] | null>(null);
+    const isAuthorized = useAppSelector(selectIsAuthorized);
 
     return (
-        <AppContext.Provider value={{ setIsAuthorized, goals, setGoals }}>
+        <>
             {isAuthorized
                 ? (
                     <Routes>
@@ -34,7 +31,7 @@ const App = () => {
                     </Routes>
                 )
             }
-        </AppContext.Provider>
+        </>
     );
 };
 

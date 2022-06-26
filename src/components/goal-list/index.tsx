@@ -1,9 +1,23 @@
-import { GoalListProps } from './index.props';
 import GoalListItem from './goal-list-item';
+import Loader from '../loader';
 
-const GoalList = ({ goals }: GoalListProps) => {
+import { GoalListProps } from './index.props';
+
+const GoalList = ({ goals, isLoading, error }: GoalListProps) => {
     const renderGoalList = () => {
-        if (!goals) {
+        if (!goals || isLoading) {
+            return (
+                <Loader />
+            );
+        }
+
+        if (error) {
+            return (
+                <p>{error}</p>
+            )
+        }
+
+        if (!goals.length) {
             return (
                 <p className="goal-list__empty">
                     Your goals for the year were <b>not found</b> 😢 <br/>
