@@ -1,0 +1,43 @@
+/* .success-message */
+
+.success-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 30px 20px;
+
+    border: 2px solid var(--black);
+    text-align: center;
+}
+
+@media screen and (width >= 375px) {
+    .success-message {
+        padding: 60px 40px;
+    }
+}
+
+@media screen and (width >= 768px) {
+    .success-message {
+        gap: 50px;
+        padding: 100px;
+    }
+}
+
+/* .success-message__title */
+
+.success-message__title {
+    max-width: 220px;
+    margin: 0;
+
+    font-size: 22px;
+    line-height: 30px;
+}
+
+/* .success-message__text */
+
+.success-message__text {
+    max-width: 220px;
+    margin: 0;
+}

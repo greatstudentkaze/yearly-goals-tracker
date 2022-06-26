@@ -18,13 +18,15 @@
 }
 
 .button:enabled:hover,
+.button[href]:hover,
 .button:focus-visible {
     background-color: var(--white);
 
     color: var(--black);
 }
 
-.button:enabled:active {
+.button:enabled:active,
+.button[href]:active {
     opacity: 0.6;
 }
 
