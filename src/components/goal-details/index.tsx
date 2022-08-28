@@ -19,8 +19,12 @@ const GoalDetails = ({
     amountTarget,
     amount,
 }: GoalDetailsProps) => {
+    const handleCompletionToggleButtonClick = () => {
+        // isCompleted
+    };
+
     return (
-        <form method="post" action="https://echo.htmlacademy.ru">
+        <>
             <article className="goal-details">
                 <div className="goal-details__header">
                     <div className="goal-details__header-wrap">
@@ -55,7 +59,7 @@ const GoalDetails = ({
                         required
                     />
                 )}
-                <Button className="goal-details__completion-toggle-button">
+                <Button className="goal-details__completion-toggle-button" onClick={handleCompletionToggleButtonClick}>
                     {isCompleted ? 'Mark uncompleted' : 'Mark completed'}
                 </Button>
                 <Button className="goal-details__submit-button" type="submit" disabled={true}>
@@ -64,7 +68,7 @@ const GoalDetails = ({
                 <NotesSection />
                 <HistorySection />
             </article>
-        </form>
+        </>
     );
 };
 
