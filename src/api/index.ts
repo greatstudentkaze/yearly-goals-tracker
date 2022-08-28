@@ -50,12 +50,36 @@ class Api {
             throw Error('An error occurred while sending your feedback. Try refreshing the page.');
         }
     }
+
+    static async createGoal(dto: IGoalDto): Promise<IGoal> {
+        try {
+            const response = await apiClient.post<IGoal>(ApiRoute.goals, {
+                ...dto,
+                isCompleted: false,
+                amount: dto.amountTarget ? 0 : undefined,
+                notes: [],
+            });
+
+            return response.data;
+        } catch (e) {
+            console.error(e);
+            throw Error('An error occurred while creating a new goal. Try refreshing the page or drop us a message.');
+        }
+    }
 }
 
 export interface IFeedbackDto {
     email: string;
     message: string;
     name: string;
+    userId: string;
+}
+
+export interface IGoalDto {
+    title: string;
+    type: string;
+    amountTarget?: string;
+    description: string;
     userId: string;
 }
 

@@ -31,6 +31,18 @@ export const goalsSlice = createSlice({
             state.error = action.payload;
             state.isLoading = false;
         },
+        createGoalPending: (state) => {
+            state.isLoading = true;
+            state.error = '';
+        },
+        createGoalFulfilled: (state, action: PayloadAction<IGoal[]>) => {
+            state.items = action.payload;
+            state.isLoading = false;
+        },
+        createGoalRejected: (state, action: PayloadAction<string>) => {
+            state.error = action.payload;
+            state.isLoading = false;
+        },
     },
 })
 
